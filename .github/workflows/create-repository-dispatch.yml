@@ -8,6 +8,6 @@ jobs:
       - name: Repository Dispatch
         uses: ./
         with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           event-type: tests
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
